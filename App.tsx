@@ -1,6 +1,5 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, TouchableOpacity, Animated } from "react-native";
-import React, { useState, useRef, Ref } from "react";
+import { Animated } from "react-native";
+import React, { useState, useRef } from "react";
 import Neos from "./components/Neos";
 import Layout from "./components/Layout";
 import DatePicker from "./components/DatePicker";
