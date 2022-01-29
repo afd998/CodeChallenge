@@ -4,14 +4,12 @@ HOW TO RUN:
 
     $ npm install
     
+ 
   3. Then
-
-    $npm install --global expo-cli
-
-  4. Then
 
     $ npm start
 
+  4. Install Expo CLI if given the option.
   5. Go on your phone and download Expo Go on the App Store or Google Play store.
   6. Open camera app on your phone and scan the QR code in your terminal.
   7. This will promp you to open the app in Expo Go. Proceed.
