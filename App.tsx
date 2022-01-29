@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, TouchableOpacity, Animated } from "react-native";
+import React, { useState, useRef, Ref } from "react";
+import Neos from "./components/Neos";
+import Layout from "./components/Layout";
+import DatePicker from "./components/DatePicker";
 
 export default function App() {
+  const scrollY = useRef<Animated.Value>(new Animated.Value(0));
+  const [dateSelected, setDateSelected] = useState(new Date());
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Layout>
+      <DatePicker
+        scrollY={scrollY}
+        dateSelected={dateSelected}
+        setDateSelected={setDateSelected}
+      />
+      <Neos date={dateSelected} scrollY={scrollY.current} />
+    </Layout>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
